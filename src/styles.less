@@ -1,0 +1,20 @@
+@primary-color: white;
+@bg: black;
+body{
+  padding:0;
+}
+h1 {
+  color: @primary-color;
+  background-color: @bg;
+}
+body,html,#app,#app>div,#app>div>div,#app>div>div>div{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+   min-height: 100%;
+   margin:0;padding:0;
+}
+#app>div>div,#app>div>div>div{
+  flex-direction:row;
+  flex:none;
+}

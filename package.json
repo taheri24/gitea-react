@@ -1,0 +1,47 @@
+{
+  "name": "gitea-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "start": "parcel src/index.html  --log-level 1",
+    "build-prod": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "@atlaskit/atlassian-navigation": "^0.10.5",
+    "@atlaskit/breadcrumbs": "^9.2.9",
+    "@atlaskit/field-base": "^14.0.2",
+    "@atlaskit/global-navigation": "^9.0.1",
+    "@atlaskit/icon": "^20.1.2",
+    "@atlaskit/logo": "^12.3.4",
+    "@atlaskit/menu": "^0.4.2",
+    "@atlaskit/navigation": "^36.0.4",
+    "@atlaskit/navigation-next": "^8.0.4",
+    "@atlaskit/page": "^11.0.13",
+    "@atlaskit/popup": "^0.4.0",
+    "@atlaskit/side-navigation": "^0.5.0",
+    "@atlaskit/theme": "^9.5.3",
+    "@atlaskit/toggle": "^8.1.7",
+    "@ui5/webcomponents": "^1.0.0-rc.7",
+    "@ui5/webcomponents-fiori": "^1.0.0-rc.7",
+    "@ui5/webcomponents-react": "^0.9.3",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-lorem-component": "^0.13.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-router-dom": "^5.1.5",
+    "less": "^3.11.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.8.3"
+  }
+}
