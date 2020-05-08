@@ -43,9 +43,12 @@
     "@types/react-router-dom": "^5.1.5",
     "create-ts-index": "^1.13.2",
     "execa": "^4.0.0",
+    "express": "^4.17.1",
     "glob": "^7.1.6",
     "less": "^3.11.1",
     "parcel-bundler": "^1.12.4",
+    "swagger-mock-api": "^1.6.0",
+    "swagger-ui-dist": "^3.25.2",
     "typescript": "^3.8.3",
     "yargs": "^15.3.1"
   }
