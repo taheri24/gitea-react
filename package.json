@@ -11,7 +11,8 @@
     "start": "parcel src/index.html  --log-level 1",
     "cti": "node scripts/generate-index-ts.js",
     "generate-api": "node scripts/codegen-api.js && cti create   ./src/app/api -i .defs.ts -b",
-    "build-prod": "parcel build src/index.html"
+    "build-prod": "parcel build src/index.html",
+    "build:resources": "node   ./scripts/resource-builder  --in  n1.js --in  n1.js --out ./public/i18n/ "
   },
   "dependencies": {
     "@atlaskit/atlassian-navigation": "^0.10.5",
@@ -45,7 +46,7 @@
     "glob": "^7.1.6",
     "less": "^3.11.1",
     "parcel-bundler": "^1.12.4",
-    "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "yargs": "^15.3.1"
   }
 }
