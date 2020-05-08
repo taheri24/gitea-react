@@ -76,3483 +76,2406 @@ export class PagedResultDto<T> implements IPagedResult<T> {
 // customer definition
 // empty
 
-export class APIError {
+export interface APIError {
   /**  */
-  'message': string;
+  message: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['message'] = data['message'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class AccessToken {
+export interface AccessToken {
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'sha1': string;
+  sha1: string;
 
   /**  */
-  'token_last_eight': string;
-
-  constructor(data: undefined | any = {}) {
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['sha1'] = data['sha1'];
-    this['token_last_eight'] = data['token_last_eight'];
-  }
+  token_last_eight: string;
 }
 
-export class AddCollaboratorOption {
+export interface AddCollaboratorOption {
   /**  */
-  'permission': string;
-
-  constructor(data: undefined | any = {}) {
-    this['permission'] = data['permission'];
-  }
+  permission: string;
 }
 
-export class AddTimeOption {
+export interface AddTimeOption {
   /**  */
-  'created': Date;
+  created: Date;
 
   /** time in seconds */
-  'time': number;
+  time: number;
 
   /** User who spent the time (optional) */
-  'user_name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['created'] = data['created'];
-    this['time'] = data['time'];
-    this['user_name'] = data['user_name'];
-  }
+  user_name: string;
 }
 
-export class AnnotatedTag {
+export interface AnnotatedTag {
   /**  */
-  'message': string;
+  message: string;
 
   /**  */
-  'object': AnnotatedTagObject;
+  object: AnnotatedTagObject;
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'tag': string;
+  tag: string;
 
   /**  */
-  'tagger': CommitUser;
+  tagger: CommitUser;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'verification': PayloadCommitVerification;
-
-  constructor(data: undefined | any = {}) {
-    this['message'] = data['message'];
-    this['object'] = data['object'];
-    this['sha'] = data['sha'];
-    this['tag'] = data['tag'];
-    this['tagger'] = data['tagger'];
-    this['url'] = data['url'];
-    this['verification'] = data['verification'];
-  }
+  verification: PayloadCommitVerification;
 }
 
-export class AnnotatedTagObject {
+export interface AnnotatedTagObject {
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'type': string;
+  type: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['sha'] = data['sha'];
-    this['type'] = data['type'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class Attachment {
+export interface Attachment {
   /**  */
-  'browser_download_url': string;
+  browser_download_url: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'download_count': number;
+  download_count: number;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'size': number;
+  size: number;
 
   /**  */
-  'uuid': string;
-
-  constructor(data: undefined | any = {}) {
-    this['browser_download_url'] = data['browser_download_url'];
-    this['created_at'] = data['created_at'];
-    this['download_count'] = data['download_count'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['size'] = data['size'];
-    this['uuid'] = data['uuid'];
-  }
+  uuid: string;
 }
 
-export class Branch {
+export interface Branch {
   /**  */
-  'commit': PayloadCommit;
+  commit: PayloadCommit;
 
   /**  */
-  'effective_branch_protection_name': string;
+  effective_branch_protection_name: string;
 
   /**  */
-  'enable_status_check': boolean;
+  enable_status_check: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'protected': boolean;
+  protected: boolean;
 
   /**  */
-  'required_approvals': number;
+  required_approvals: number;
 
   /**  */
-  'status_check_contexts': string[];
+  status_check_contexts: string[];
 
   /**  */
-  'user_can_merge': boolean;
+  user_can_merge: boolean;
 
   /**  */
-  'user_can_push': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['commit'] = data['commit'];
-    this['effective_branch_protection_name'] = data['effective_branch_protection_name'];
-    this['enable_status_check'] = data['enable_status_check'];
-    this['name'] = data['name'];
-    this['protected'] = data['protected'];
-    this['required_approvals'] = data['required_approvals'];
-    this['status_check_contexts'] = data['status_check_contexts'];
-    this['user_can_merge'] = data['user_can_merge'];
-    this['user_can_push'] = data['user_can_push'];
-  }
+  user_can_push: boolean;
 }
 
-export class BranchProtection {
+export interface BranchProtection {
   /**  */
-  'approvals_whitelist_teams': string[];
+  approvals_whitelist_teams: string[];
 
   /**  */
-  'approvals_whitelist_username': string[];
+  approvals_whitelist_username: string[];
 
   /**  */
-  'block_on_outdated_branch': boolean;
+  block_on_outdated_branch: boolean;
 
   /**  */
-  'block_on_rejected_reviews': boolean;
+  block_on_rejected_reviews: boolean;
 
   /**  */
-  'branch_name': string;
+  branch_name: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'dismiss_stale_approvals': boolean;
+  dismiss_stale_approvals: boolean;
 
   /**  */
-  'enable_approvals_whitelist': boolean;
+  enable_approvals_whitelist: boolean;
 
   /**  */
-  'enable_merge_whitelist': boolean;
+  enable_merge_whitelist: boolean;
 
   /**  */
-  'enable_push': boolean;
+  enable_push: boolean;
 
   /**  */
-  'enable_push_whitelist': boolean;
+  enable_push_whitelist: boolean;
 
   /**  */
-  'enable_status_check': boolean;
+  enable_status_check: boolean;
 
   /**  */
-  'merge_whitelist_teams': string[];
+  merge_whitelist_teams: string[];
 
   /**  */
-  'merge_whitelist_usernames': string[];
+  merge_whitelist_usernames: string[];
 
   /**  */
-  'protected_file_patterns': string;
+  protected_file_patterns: string;
 
   /**  */
-  'push_whitelist_deploy_keys': boolean;
+  push_whitelist_deploy_keys: boolean;
 
   /**  */
-  'push_whitelist_teams': string[];
+  push_whitelist_teams: string[];
 
   /**  */
-  'push_whitelist_usernames': string[];
+  push_whitelist_usernames: string[];
 
   /**  */
-  'require_signed_commits': boolean;
+  require_signed_commits: boolean;
 
   /**  */
-  'required_approvals': number;
+  required_approvals: number;
 
   /**  */
-  'status_check_contexts': string[];
+  status_check_contexts: string[];
 
   /**  */
-  'updated_at': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['approvals_whitelist_teams'] = data['approvals_whitelist_teams'];
-    this['approvals_whitelist_username'] = data['approvals_whitelist_username'];
-    this['block_on_outdated_branch'] = data['block_on_outdated_branch'];
-    this['block_on_rejected_reviews'] = data['block_on_rejected_reviews'];
-    this['branch_name'] = data['branch_name'];
-    this['created_at'] = data['created_at'];
-    this['dismiss_stale_approvals'] = data['dismiss_stale_approvals'];
-    this['enable_approvals_whitelist'] = data['enable_approvals_whitelist'];
-    this['enable_merge_whitelist'] = data['enable_merge_whitelist'];
-    this['enable_push'] = data['enable_push'];
-    this['enable_push_whitelist'] = data['enable_push_whitelist'];
-    this['enable_status_check'] = data['enable_status_check'];
-    this['merge_whitelist_teams'] = data['merge_whitelist_teams'];
-    this['merge_whitelist_usernames'] = data['merge_whitelist_usernames'];
-    this['protected_file_patterns'] = data['protected_file_patterns'];
-    this['push_whitelist_deploy_keys'] = data['push_whitelist_deploy_keys'];
-    this['push_whitelist_teams'] = data['push_whitelist_teams'];
-    this['push_whitelist_usernames'] = data['push_whitelist_usernames'];
-    this['require_signed_commits'] = data['require_signed_commits'];
-    this['required_approvals'] = data['required_approvals'];
-    this['status_check_contexts'] = data['status_check_contexts'];
-    this['updated_at'] = data['updated_at'];
-  }
+  updated_at: Date;
 }
 
-export class Comment {
+export interface Comment {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'issue_url': string;
+  issue_url: string;
 
   /**  */
-  'original_author': string;
+  original_author: string;
 
   /**  */
-  'original_author_id': number;
+  original_author_id: number;
 
   /**  */
-  'pull_request_url': string;
+  pull_request_url: string;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['created_at'] = data['created_at'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['issue_url'] = data['issue_url'];
-    this['original_author'] = data['original_author'];
-    this['original_author_id'] = data['original_author_id'];
-    this['pull_request_url'] = data['pull_request_url'];
-    this['updated_at'] = data['updated_at'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class Commit {
+export interface Commit {
   /**  */
-  'author': User;
+  author: User;
 
   /**  */
-  'commit': RepoCommit;
+  commit: RepoCommit;
 
   /**  */
-  'committer': User;
+  committer: User;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'parents': CommitMeta[];
+  parents: CommitMeta[];
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['commit'] = data['commit'];
-    this['committer'] = data['committer'];
-    this['html_url'] = data['html_url'];
-    this['parents'] = data['parents'];
-    this['sha'] = data['sha'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class CommitDateOptions {
+export interface CommitDateOptions {
   /**  */
-  'author': Date;
+  author: Date;
 
   /**  */
-  'committer': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['committer'] = data['committer'];
-  }
+  committer: Date;
 }
 
-export class CommitMeta {
+export interface CommitMeta {
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['sha'] = data['sha'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class CommitUser {
+export interface CommitUser {
   /**  */
-  'date': string;
+  date: string;
 
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['date'] = data['date'];
-    this['email'] = data['email'];
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class ContentsResponse {
+export interface ContentsResponse {
   /**  */
-  '_links': FileLinksResponse;
+  _links: FileLinksResponse;
 
   /** `content` is populated when `type` is `file`, otherwise null */
-  'content': string;
+  content: string;
 
   /**  */
-  'download_url': string;
+  download_url: string;
 
   /** `encoding` is populated when `type` is `file`, otherwise null */
-  'encoding': string;
+  encoding: string;
 
   /**  */
-  'git_url': string;
+  git_url: string;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'path': string;
+  path: string;
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'size': number;
+  size: number;
 
   /** `submodule_git_url` is populated when `type` is `submodule`, otherwise null */
-  'submodule_git_url': string;
+  submodule_git_url: string;
 
   /** `target` is populated when `type` is `symlink`, otherwise null */
-  'target': string;
+  target: string;
 
   /** `type` will be `file`, `dir`, `symlink`, or `submodule` */
-  'type': string;
+  type: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['_links'] = data['_links'];
-    this['content'] = data['content'];
-    this['download_url'] = data['download_url'];
-    this['encoding'] = data['encoding'];
-    this['git_url'] = data['git_url'];
-    this['html_url'] = data['html_url'];
-    this['name'] = data['name'];
-    this['path'] = data['path'];
-    this['sha'] = data['sha'];
-    this['size'] = data['size'];
-    this['submodule_git_url'] = data['submodule_git_url'];
-    this['target'] = data['target'];
-    this['type'] = data['type'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class CreateBranchProtectionOption {
+export interface CreateBranchProtectionOption {
   /**  */
-  'approvals_whitelist_teams': string[];
+  approvals_whitelist_teams: string[];
 
   /**  */
-  'approvals_whitelist_username': string[];
+  approvals_whitelist_username: string[];
 
   /**  */
-  'block_on_outdated_branch': boolean;
+  block_on_outdated_branch: boolean;
 
   /**  */
-  'block_on_rejected_reviews': boolean;
+  block_on_rejected_reviews: boolean;
 
   /**  */
-  'branch_name': string;
+  branch_name: string;
 
   /**  */
-  'dismiss_stale_approvals': boolean;
+  dismiss_stale_approvals: boolean;
 
   /**  */
-  'enable_approvals_whitelist': boolean;
+  enable_approvals_whitelist: boolean;
 
   /**  */
-  'enable_merge_whitelist': boolean;
+  enable_merge_whitelist: boolean;
 
   /**  */
-  'enable_push': boolean;
+  enable_push: boolean;
 
   /**  */
-  'enable_push_whitelist': boolean;
+  enable_push_whitelist: boolean;
 
   /**  */
-  'enable_status_check': boolean;
+  enable_status_check: boolean;
 
   /**  */
-  'merge_whitelist_teams': string[];
+  merge_whitelist_teams: string[];
 
   /**  */
-  'merge_whitelist_usernames': string[];
+  merge_whitelist_usernames: string[];
 
   /**  */
-  'protected_file_patterns': string;
+  protected_file_patterns: string;
 
   /**  */
-  'push_whitelist_deploy_keys': boolean;
+  push_whitelist_deploy_keys: boolean;
 
   /**  */
-  'push_whitelist_teams': string[];
+  push_whitelist_teams: string[];
 
   /**  */
-  'push_whitelist_usernames': string[];
+  push_whitelist_usernames: string[];
 
   /**  */
-  'require_signed_commits': boolean;
+  require_signed_commits: boolean;
 
   /**  */
-  'required_approvals': number;
+  required_approvals: number;
 
   /**  */
-  'status_check_contexts': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['approvals_whitelist_teams'] = data['approvals_whitelist_teams'];
-    this['approvals_whitelist_username'] = data['approvals_whitelist_username'];
-    this['block_on_outdated_branch'] = data['block_on_outdated_branch'];
-    this['block_on_rejected_reviews'] = data['block_on_rejected_reviews'];
-    this['branch_name'] = data['branch_name'];
-    this['dismiss_stale_approvals'] = data['dismiss_stale_approvals'];
-    this['enable_approvals_whitelist'] = data['enable_approvals_whitelist'];
-    this['enable_merge_whitelist'] = data['enable_merge_whitelist'];
-    this['enable_push'] = data['enable_push'];
-    this['enable_push_whitelist'] = data['enable_push_whitelist'];
-    this['enable_status_check'] = data['enable_status_check'];
-    this['merge_whitelist_teams'] = data['merge_whitelist_teams'];
-    this['merge_whitelist_usernames'] = data['merge_whitelist_usernames'];
-    this['protected_file_patterns'] = data['protected_file_patterns'];
-    this['push_whitelist_deploy_keys'] = data['push_whitelist_deploy_keys'];
-    this['push_whitelist_teams'] = data['push_whitelist_teams'];
-    this['push_whitelist_usernames'] = data['push_whitelist_usernames'];
-    this['require_signed_commits'] = data['require_signed_commits'];
-    this['required_approvals'] = data['required_approvals'];
-    this['status_check_contexts'] = data['status_check_contexts'];
-  }
+  status_check_contexts: string[];
 }
 
-export class CreateEmailOption {
+export interface CreateEmailOption {
   /** email addresses to add */
-  'emails': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['emails'] = data['emails'];
-  }
+  emails: string[];
 }
 
-export class CreateFileOptions {
+export interface CreateFileOptions {
   /**  */
-  'author': Identity;
+  author: Identity;
 
   /** branch (optional) to base this file from. if not given, the default branch is used */
-  'branch': string;
+  branch: string;
 
   /**  */
-  'committer': Identity;
+  committer: Identity;
 
   /** content must be base64 encoded */
-  'content': string;
+  content: string;
 
   /**  */
-  'dates': CommitDateOptions;
+  dates: CommitDateOptions;
 
   /** message (optional) for the commit of this file. if not supplied, a default message will be used */
-  'message': string;
+  message: string;
 
   /** new_branch (optional) will make a new branch from `branch` before creating the file */
-  'new_branch': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['branch'] = data['branch'];
-    this['committer'] = data['committer'];
-    this['content'] = data['content'];
-    this['dates'] = data['dates'];
-    this['message'] = data['message'];
-    this['new_branch'] = data['new_branch'];
-  }
+  new_branch: string;
 }
 
-export class CreateForkOption {
+export interface CreateForkOption {
   /** organization name, if forking into an organization */
-  'organization': string;
-
-  constructor(data: undefined | any = {}) {
-    this['organization'] = data['organization'];
-  }
+  organization: string;
 }
 
-export class CreateGPGKeyOption {
+export interface CreateGPGKeyOption {
   /** An armored GPG key to add */
-  'armored_public_key': string;
-
-  constructor(data: undefined | any = {}) {
-    this['armored_public_key'] = data['armored_public_key'];
-  }
+  armored_public_key: string;
 }
 
-export class CreateHookOption {
+export interface CreateHookOption {
   /**  */
-  'active': boolean;
+  active: boolean;
 
   /**  */
-  'branch_filter': string;
+  branch_filter: string;
 
   /**  */
-  'config': CreateHookOptionConfig;
+  config: CreateHookOptionConfig;
 
   /**  */
-  'events': string[];
+  events: string[];
 
   /**  */
-  'type': EnumCreateHookOptionType;
-
-  constructor(data: undefined | any = {}) {
-    this['active'] = data['active'];
-    this['branch_filter'] = data['branch_filter'];
-    this['config'] = data['config'];
-    this['events'] = data['events'];
-    this['type'] = data['type'];
-  }
+  type: EnumCreateHookOptionType;
 }
 
-export class CreateHookOptionConfig {
-  constructor(data: undefined | any = {}) {}
-}
+export interface CreateHookOptionConfig {}
 
-export class CreateIssueCommentOption {
+export interface CreateIssueCommentOption {
   /**  */
-  'body': string;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-  }
+  body: string;
 }
 
-export class CreateIssueOption {
+export interface CreateIssueOption {
   /** username of assignee */
-  'assignee': string;
+  assignee: string;
 
   /**  */
-  'assignees': string[];
+  assignees: string[];
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'closed': boolean;
+  closed: boolean;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /** list of label ids */
-  'labels': number[];
+  labels: number[];
 
   /** milestone id */
-  'milestone': number;
+  milestone: number;
 
   /**  */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['body'] = data['body'];
-    this['closed'] = data['closed'];
-    this['due_date'] = data['due_date'];
-    this['labels'] = data['labels'];
-    this['milestone'] = data['milestone'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class CreateKeyOption {
+export interface CreateKeyOption {
   /** An armored SSH key to add */
-  'key': string;
+  key: string;
 
   /** Describe if the key has only read access or read/write */
-  'read_only': boolean;
+  read_only: boolean;
 
   /** Title of the key to add */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['key'] = data['key'];
-    this['read_only'] = data['read_only'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class CreateLabelOption {
+export interface CreateLabelOption {
   /**  */
-  'color': string;
+  color: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['color'] = data['color'];
-    this['description'] = data['description'];
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class CreateMilestoneOption {
+export interface CreateMilestoneOption {
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'due_on': Date;
+  due_on: Date;
 
   /**  */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['description'] = data['description'];
-    this['due_on'] = data['due_on'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class CreateOAuth2ApplicationOptions {
+export interface CreateOAuth2ApplicationOptions {
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'redirect_uris': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['name'] = data['name'];
-    this['redirect_uris'] = data['redirect_uris'];
-  }
+  redirect_uris: string[];
 }
 
-export class CreateOrgOption {
+export interface CreateOrgOption {
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'location': string;
+  location: string;
 
   /**  */
-  'repo_admin_change_team_access': boolean;
+  repo_admin_change_team_access: boolean;
 
   /**  */
-  'username': string;
+  username: string;
 
   /** possible values are `public` (default), `limited` or `private` */
-  'visibility': EnumCreateOrgOptionVisibility;
+  visibility: EnumCreateOrgOptionVisibility;
 
   /**  */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['description'] = data['description'];
-    this['full_name'] = data['full_name'];
-    this['location'] = data['location'];
-    this['repo_admin_change_team_access'] = data['repo_admin_change_team_access'];
-    this['username'] = data['username'];
-    this['visibility'] = data['visibility'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class CreatePullRequestOption {
+export interface CreatePullRequestOption {
   /**  */
-  'assignee': string;
+  assignee: string;
 
   /**  */
-  'assignees': string[];
+  assignees: string[];
 
   /**  */
-  'base': string;
+  base: string;
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /**  */
-  'head': string;
+  head: string;
 
   /**  */
-  'labels': number[];
+  labels: number[];
 
   /**  */
-  'milestone': number;
+  milestone: number;
 
   /**  */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['base'] = data['base'];
-    this['body'] = data['body'];
-    this['due_date'] = data['due_date'];
-    this['head'] = data['head'];
-    this['labels'] = data['labels'];
-    this['milestone'] = data['milestone'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class CreatePullReviewComment {
+export interface CreatePullReviewComment {
   /**  */
-  'body': string;
+  body: string;
 
   /** if comment to new file line or 0 */
-  'new_position': number;
+  new_position: number;
 
   /** if comment to old file line or 0 */
-  'old_position': number;
+  old_position: number;
 
   /** the tree path */
-  'path': string;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['new_position'] = data['new_position'];
-    this['old_position'] = data['old_position'];
-    this['path'] = data['path'];
-  }
+  path: string;
 }
 
-export class CreatePullReviewOptions {
+export interface CreatePullReviewOptions {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'comments': CreatePullReviewComment[];
+  comments: CreatePullReviewComment[];
 
   /**  */
-  'commit_id': string;
+  commit_id: string;
 
   /**  */
-  'event': ReviewStateType;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['comments'] = data['comments'];
-    this['commit_id'] = data['commit_id'];
-    this['event'] = data['event'];
-  }
+  event: ReviewStateType;
 }
 
-export class CreateReleaseOption {
+export interface CreateReleaseOption {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'draft': boolean;
+  draft: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'prerelease': boolean;
+  prerelease: boolean;
 
   /**  */
-  'tag_name': string;
+  tag_name: string;
 
   /**  */
-  'target_commitish': string;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['draft'] = data['draft'];
-    this['name'] = data['name'];
-    this['prerelease'] = data['prerelease'];
-    this['tag_name'] = data['tag_name'];
-    this['target_commitish'] = data['target_commitish'];
-  }
+  target_commitish: string;
 }
 
-export class CreateRepoOption {
+export interface CreateRepoOption {
   /** Whether the repository should be auto-intialized? */
-  'auto_init': boolean;
+  auto_init: boolean;
 
   /** DefaultBranch of the repository (used when initializes and in template) */
-  'default_branch': string;
+  default_branch: string;
 
   /** Description of the repository to create */
-  'description': string;
+  description: string;
 
   /** Gitignores to use */
-  'gitignores': string;
+  gitignores: string;
 
   /** Issue Label set to use */
-  'issue_labels': string;
+  issue_labels: string;
 
   /** License to use */
-  'license': string;
+  license: string;
 
   /** Name of the repository to create */
-  'name': string;
+  name: string;
 
   /** Whether the repository is private */
-  'private': boolean;
+  private: boolean;
 
   /** Readme of the repository to create */
-  'readme': string;
-
-  constructor(data: undefined | any = {}) {
-    this['auto_init'] = data['auto_init'];
-    this['default_branch'] = data['default_branch'];
-    this['description'] = data['description'];
-    this['gitignores'] = data['gitignores'];
-    this['issue_labels'] = data['issue_labels'];
-    this['license'] = data['license'];
-    this['name'] = data['name'];
-    this['private'] = data['private'];
-    this['readme'] = data['readme'];
-  }
+  readme: string;
 }
 
-export class CreateStatusOption {
+export interface CreateStatusOption {
   /**  */
-  'context': string;
+  context: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'state': StatusState;
+  state: StatusState;
 
   /**  */
-  'target_url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['context'] = data['context'];
-    this['description'] = data['description'];
-    this['state'] = data['state'];
-    this['target_url'] = data['target_url'];
-  }
+  target_url: string;
 }
 
-export class CreateTeamOption {
+export interface CreateTeamOption {
   /**  */
-  'can_create_org_repo': boolean;
+  can_create_org_repo: boolean;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'includes_all_repositories': boolean;
+  includes_all_repositories: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'permission': EnumCreateTeamOptionPermission;
+  permission: EnumCreateTeamOptionPermission;
 
   /**  */
-  'units': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['can_create_org_repo'] = data['can_create_org_repo'];
-    this['description'] = data['description'];
-    this['includes_all_repositories'] = data['includes_all_repositories'];
-    this['name'] = data['name'];
-    this['permission'] = data['permission'];
-    this['units'] = data['units'];
-  }
+  units: string[];
 }
 
-export class CreateUserOption {
+export interface CreateUserOption {
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'login_name': string;
+  login_name: string;
 
   /**  */
-  'must_change_password': boolean;
+  must_change_password: boolean;
 
   /**  */
-  'password': string;
+  password: string;
 
   /**  */
-  'send_notify': boolean;
+  send_notify: boolean;
 
   /**  */
-  'source_id': number;
+  source_id: number;
 
   /**  */
-  'username': string;
-
-  constructor(data: undefined | any = {}) {
-    this['email'] = data['email'];
-    this['full_name'] = data['full_name'];
-    this['login_name'] = data['login_name'];
-    this['must_change_password'] = data['must_change_password'];
-    this['password'] = data['password'];
-    this['send_notify'] = data['send_notify'];
-    this['source_id'] = data['source_id'];
-    this['username'] = data['username'];
-  }
+  username: string;
 }
 
-export class DeleteEmailOption {
+export interface DeleteEmailOption {
   /** email addresses to delete */
-  'emails': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['emails'] = data['emails'];
-  }
+  emails: string[];
 }
 
-export class DeleteFileOptions {
+export interface DeleteFileOptions {
   /**  */
-  'author': Identity;
+  author: Identity;
 
   /** branch (optional) to base this file from. if not given, the default branch is used */
-  'branch': string;
+  branch: string;
 
   /**  */
-  'committer': Identity;
+  committer: Identity;
 
   /**  */
-  'dates': CommitDateOptions;
+  dates: CommitDateOptions;
 
   /** message (optional) for the commit of this file. if not supplied, a default message will be used */
-  'message': string;
+  message: string;
 
   /** new_branch (optional) will make a new branch from `branch` before creating the file */
-  'new_branch': string;
+  new_branch: string;
 
   /** sha is the SHA for the file that already exists */
-  'sha': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['branch'] = data['branch'];
-    this['committer'] = data['committer'];
-    this['dates'] = data['dates'];
-    this['message'] = data['message'];
-    this['new_branch'] = data['new_branch'];
-    this['sha'] = data['sha'];
-  }
+  sha: string;
 }
 
-export class DeployKey {
+export interface DeployKey {
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'fingerprint': string;
+  fingerprint: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'key': string;
+  key: string;
 
   /**  */
-  'key_id': number;
+  key_id: number;
 
   /**  */
-  'read_only': boolean;
+  read_only: boolean;
 
   /**  */
-  'repository': Repository;
+  repository: Repository;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['created_at'] = data['created_at'];
-    this['fingerprint'] = data['fingerprint'];
-    this['id'] = data['id'];
-    this['key'] = data['key'];
-    this['key_id'] = data['key_id'];
-    this['read_only'] = data['read_only'];
-    this['repository'] = data['repository'];
-    this['title'] = data['title'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class EditAttachmentOptions {
+export interface EditAttachmentOptions {
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class EditBranchProtectionOption {
+export interface EditBranchProtectionOption {
   /**  */
-  'approvals_whitelist_teams': string[];
+  approvals_whitelist_teams: string[];
 
   /**  */
-  'approvals_whitelist_username': string[];
+  approvals_whitelist_username: string[];
 
   /**  */
-  'block_on_outdated_branch': boolean;
+  block_on_outdated_branch: boolean;
 
   /**  */
-  'block_on_rejected_reviews': boolean;
+  block_on_rejected_reviews: boolean;
 
   /**  */
-  'dismiss_stale_approvals': boolean;
+  dismiss_stale_approvals: boolean;
 
   /**  */
-  'enable_approvals_whitelist': boolean;
+  enable_approvals_whitelist: boolean;
 
   /**  */
-  'enable_merge_whitelist': boolean;
+  enable_merge_whitelist: boolean;
 
   /**  */
-  'enable_push': boolean;
+  enable_push: boolean;
 
   /**  */
-  'enable_push_whitelist': boolean;
+  enable_push_whitelist: boolean;
 
   /**  */
-  'enable_status_check': boolean;
+  enable_status_check: boolean;
 
   /**  */
-  'merge_whitelist_teams': string[];
+  merge_whitelist_teams: string[];
 
   /**  */
-  'merge_whitelist_usernames': string[];
+  merge_whitelist_usernames: string[];
 
   /**  */
-  'protected_file_patterns': string;
+  protected_file_patterns: string;
 
   /**  */
-  'push_whitelist_deploy_keys': boolean;
+  push_whitelist_deploy_keys: boolean;
 
   /**  */
-  'push_whitelist_teams': string[];
+  push_whitelist_teams: string[];
 
   /**  */
-  'push_whitelist_usernames': string[];
+  push_whitelist_usernames: string[];
 
   /**  */
-  'require_signed_commits': boolean;
+  require_signed_commits: boolean;
 
   /**  */
-  'required_approvals': number;
+  required_approvals: number;
 
   /**  */
-  'status_check_contexts': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['approvals_whitelist_teams'] = data['approvals_whitelist_teams'];
-    this['approvals_whitelist_username'] = data['approvals_whitelist_username'];
-    this['block_on_outdated_branch'] = data['block_on_outdated_branch'];
-    this['block_on_rejected_reviews'] = data['block_on_rejected_reviews'];
-    this['dismiss_stale_approvals'] = data['dismiss_stale_approvals'];
-    this['enable_approvals_whitelist'] = data['enable_approvals_whitelist'];
-    this['enable_merge_whitelist'] = data['enable_merge_whitelist'];
-    this['enable_push'] = data['enable_push'];
-    this['enable_push_whitelist'] = data['enable_push_whitelist'];
-    this['enable_status_check'] = data['enable_status_check'];
-    this['merge_whitelist_teams'] = data['merge_whitelist_teams'];
-    this['merge_whitelist_usernames'] = data['merge_whitelist_usernames'];
-    this['protected_file_patterns'] = data['protected_file_patterns'];
-    this['push_whitelist_deploy_keys'] = data['push_whitelist_deploy_keys'];
-    this['push_whitelist_teams'] = data['push_whitelist_teams'];
-    this['push_whitelist_usernames'] = data['push_whitelist_usernames'];
-    this['require_signed_commits'] = data['require_signed_commits'];
-    this['required_approvals'] = data['required_approvals'];
-    this['status_check_contexts'] = data['status_check_contexts'];
-  }
+  status_check_contexts: string[];
 }
 
-export class EditDeadlineOption {
+export interface EditDeadlineOption {
   /**  */
-  'due_date': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['due_date'] = data['due_date'];
-  }
+  due_date: Date;
 }
 
-export class EditGitHookOption {
+export interface EditGitHookOption {
   /**  */
-  'content': string;
-
-  constructor(data: undefined | any = {}) {
-    this['content'] = data['content'];
-  }
+  content: string;
 }
 
-export class EditHookOption {
+export interface EditHookOption {
   /**  */
-  'active': boolean;
+  active: boolean;
 
   /**  */
-  'branch_filter': string;
+  branch_filter: string;
 
   /**  */
-  'config': object;
+  config: object;
 
   /**  */
-  'events': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['active'] = data['active'];
-    this['branch_filter'] = data['branch_filter'];
-    this['config'] = data['config'];
-    this['events'] = data['events'];
-  }
+  events: string[];
 }
 
-export class EditIssueCommentOption {
+export interface EditIssueCommentOption {
   /**  */
-  'body': string;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-  }
+  body: string;
 }
 
-export class EditIssueOption {
+export interface EditIssueOption {
   /**  */
-  'assignee': string;
+  assignee: string;
 
   /**  */
-  'assignees': string[];
+  assignees: string[];
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /**  */
-  'milestone': number;
+  milestone: number;
 
   /**  */
-  'state': string;
+  state: string;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'unset_due_date': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['body'] = data['body'];
-    this['due_date'] = data['due_date'];
-    this['milestone'] = data['milestone'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-    this['unset_due_date'] = data['unset_due_date'];
-  }
+  unset_due_date: boolean;
 }
 
-export class EditLabelOption {
+export interface EditLabelOption {
   /**  */
-  'color': string;
+  color: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['color'] = data['color'];
-    this['description'] = data['description'];
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class EditMilestoneOption {
+export interface EditMilestoneOption {
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'due_on': Date;
+  due_on: Date;
 
   /**  */
-  'state': string;
+  state: string;
 
   /**  */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['description'] = data['description'];
-    this['due_on'] = data['due_on'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class EditOrgOption {
+export interface EditOrgOption {
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'location': string;
+  location: string;
 
   /**  */
-  'repo_admin_change_team_access': boolean;
+  repo_admin_change_team_access: boolean;
 
   /** possible values are `public`, `limited` or `private` */
-  'visibility': EnumEditOrgOptionVisibility;
+  visibility: EnumEditOrgOptionVisibility;
 
   /**  */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['description'] = data['description'];
-    this['full_name'] = data['full_name'];
-    this['location'] = data['location'];
-    this['repo_admin_change_team_access'] = data['repo_admin_change_team_access'];
-    this['visibility'] = data['visibility'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class EditPullRequestOption {
+export interface EditPullRequestOption {
   /**  */
-  'assignee': string;
+  assignee: string;
 
   /**  */
-  'assignees': string[];
+  assignees: string[];
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /**  */
-  'labels': number[];
+  labels: number[];
 
   /**  */
-  'milestone': number;
+  milestone: number;
 
   /**  */
-  'state': string;
+  state: string;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'unset_due_date': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['body'] = data['body'];
-    this['due_date'] = data['due_date'];
-    this['labels'] = data['labels'];
-    this['milestone'] = data['milestone'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-    this['unset_due_date'] = data['unset_due_date'];
-  }
+  unset_due_date: boolean;
 }
 
-export class EditReactionOption {
+export interface EditReactionOption {
   /**  */
-  'content': string;
-
-  constructor(data: undefined | any = {}) {
-    this['content'] = data['content'];
-  }
+  content: string;
 }
 
-export class EditReleaseOption {
+export interface EditReleaseOption {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'draft': boolean;
+  draft: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'prerelease': boolean;
+  prerelease: boolean;
 
   /**  */
-  'tag_name': string;
+  tag_name: string;
 
   /**  */
-  'target_commitish': string;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['draft'] = data['draft'];
-    this['name'] = data['name'];
-    this['prerelease'] = data['prerelease'];
-    this['tag_name'] = data['tag_name'];
-    this['target_commitish'] = data['target_commitish'];
-  }
+  target_commitish: string;
 }
 
-export class EditRepoOption {
+export interface EditRepoOption {
   /** either `true` to allow merging pull requests with a merge commit, or `false` to prevent merging pull requests with merge commits. `has_pull_requests` must be `true`. */
-  'allow_merge_commits': boolean;
+  allow_merge_commits: boolean;
 
   /** either `true` to allow rebase-merging pull requests, or `false` to prevent rebase-merging. `has_pull_requests` must be `true`. */
-  'allow_rebase': boolean;
+  allow_rebase: boolean;
 
   /** either `true` to allow rebase with explicit merge commits (--no-ff), or `false` to prevent rebase with explicit merge commits. `has_pull_requests` must be `true`. */
-  'allow_rebase_explicit': boolean;
+  allow_rebase_explicit: boolean;
 
   /** either `true` to allow squash-merging pull requests, or `false` to prevent squash-merging. `has_pull_requests` must be `true`. */
-  'allow_squash_merge': boolean;
+  allow_squash_merge: boolean;
 
   /** set to `true` to archive this repository. */
-  'archived': boolean;
+  archived: boolean;
 
   /** sets the default branch for this repository. */
-  'default_branch': string;
+  default_branch: string;
 
   /** a short description of the repository. */
-  'description': string;
+  description: string;
 
   /**  */
-  'external_tracker': ExternalTracker;
+  external_tracker: ExternalTracker;
 
   /**  */
-  'external_wiki': ExternalWiki;
+  external_wiki: ExternalWiki;
 
   /** either `true` to enable issues for this repository or `false` to disable them. */
-  'has_issues': boolean;
+  has_issues: boolean;
 
   /** either `true` to allow pull requests, or `false` to prevent pull request. */
-  'has_pull_requests': boolean;
+  has_pull_requests: boolean;
 
   /** either `true` to enable the wiki for this repository or `false` to disable it. */
-  'has_wiki': boolean;
+  has_wiki: boolean;
 
   /** either `true` to ignore whitespace for conflicts, or `false` to not ignore whitespace. `has_pull_requests` must be `true`. */
-  'ignore_whitespace_conflicts': boolean;
+  ignore_whitespace_conflicts: boolean;
 
   /**  */
-  'internal_tracker': InternalTracker;
+  internal_tracker: InternalTracker;
 
   /** name of the repository */
-  'name': string;
+  name: string;
 
   /** either `true` to make the repository private or `false` to make it public.
 Note: you will get a 422 error if the organization restricts changing repository visibility to organization
 owners and a non-owner tries to change the value of private. */
-  'private': boolean;
+  private: boolean;
 
   /** either `true` to make this repository a template or `false` to make it a normal repository */
-  'template': boolean;
+  template: boolean;
 
   /** a URL with more information about the repository. */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['allow_merge_commits'] = data['allow_merge_commits'];
-    this['allow_rebase'] = data['allow_rebase'];
-    this['allow_rebase_explicit'] = data['allow_rebase_explicit'];
-    this['allow_squash_merge'] = data['allow_squash_merge'];
-    this['archived'] = data['archived'];
-    this['default_branch'] = data['default_branch'];
-    this['description'] = data['description'];
-    this['external_tracker'] = data['external_tracker'];
-    this['external_wiki'] = data['external_wiki'];
-    this['has_issues'] = data['has_issues'];
-    this['has_pull_requests'] = data['has_pull_requests'];
-    this['has_wiki'] = data['has_wiki'];
-    this['ignore_whitespace_conflicts'] = data['ignore_whitespace_conflicts'];
-    this['internal_tracker'] = data['internal_tracker'];
-    this['name'] = data['name'];
-    this['private'] = data['private'];
-    this['template'] = data['template'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class EditTeamOption {
+export interface EditTeamOption {
   /**  */
-  'can_create_org_repo': boolean;
+  can_create_org_repo: boolean;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'includes_all_repositories': boolean;
+  includes_all_repositories: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'permission': EnumEditTeamOptionPermission;
+  permission: EnumEditTeamOptionPermission;
 
   /**  */
-  'units': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['can_create_org_repo'] = data['can_create_org_repo'];
-    this['description'] = data['description'];
-    this['includes_all_repositories'] = data['includes_all_repositories'];
-    this['name'] = data['name'];
-    this['permission'] = data['permission'];
-    this['units'] = data['units'];
-  }
+  units: string[];
 }
 
-export class EditUserOption {
+export interface EditUserOption {
   /**  */
-  'active': boolean;
+  active: boolean;
 
   /**  */
-  'admin': boolean;
+  admin: boolean;
 
   /**  */
-  'allow_create_organization': boolean;
+  allow_create_organization: boolean;
 
   /**  */
-  'allow_git_hook': boolean;
+  allow_git_hook: boolean;
 
   /**  */
-  'allow_import_local': boolean;
+  allow_import_local: boolean;
 
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'location': string;
+  location: string;
 
   /**  */
-  'login_name': string;
+  login_name: string;
 
   /**  */
-  'max_repo_creation': number;
+  max_repo_creation: number;
 
   /**  */
-  'must_change_password': boolean;
+  must_change_password: boolean;
 
   /**  */
-  'password': string;
+  password: string;
 
   /**  */
-  'prohibit_login': boolean;
+  prohibit_login: boolean;
 
   /**  */
-  'source_id': number;
+  source_id: number;
 
   /**  */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['active'] = data['active'];
-    this['admin'] = data['admin'];
-    this['allow_create_organization'] = data['allow_create_organization'];
-    this['allow_git_hook'] = data['allow_git_hook'];
-    this['allow_import_local'] = data['allow_import_local'];
-    this['email'] = data['email'];
-    this['full_name'] = data['full_name'];
-    this['location'] = data['location'];
-    this['login_name'] = data['login_name'];
-    this['max_repo_creation'] = data['max_repo_creation'];
-    this['must_change_password'] = data['must_change_password'];
-    this['password'] = data['password'];
-    this['prohibit_login'] = data['prohibit_login'];
-    this['source_id'] = data['source_id'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class Email {
+export interface Email {
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'primary': boolean;
+  primary: boolean;
 
   /**  */
-  'verified': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['email'] = data['email'];
-    this['primary'] = data['primary'];
-    this['verified'] = data['verified'];
-  }
+  verified: boolean;
 }
 
-export class ExternalTracker {
+export interface ExternalTracker {
   /** External Issue Tracker URL Format. Use the placeholders {user}, {repo} and {index} for the username, repository name and issue index. */
-  'external_tracker_format': string;
+  external_tracker_format: string;
 
   /** External Issue Tracker Number Format, either `numeric` or `alphanumeric` */
-  'external_tracker_style': string;
+  external_tracker_style: string;
 
   /** URL of external issue tracker. */
-  'external_tracker_url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['external_tracker_format'] = data['external_tracker_format'];
-    this['external_tracker_style'] = data['external_tracker_style'];
-    this['external_tracker_url'] = data['external_tracker_url'];
-  }
+  external_tracker_url: string;
 }
 
-export class ExternalWiki {
+export interface ExternalWiki {
   /** URL of external wiki. */
-  'external_wiki_url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['external_wiki_url'] = data['external_wiki_url'];
-  }
+  external_wiki_url: string;
 }
 
-export class FileCommitResponse {
+export interface FileCommitResponse {
   /**  */
-  'author': CommitUser;
+  author: CommitUser;
 
   /**  */
-  'committer': CommitUser;
+  committer: CommitUser;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'message': string;
+  message: string;
 
   /**  */
-  'parents': CommitMeta[];
+  parents: CommitMeta[];
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'tree': CommitMeta;
+  tree: CommitMeta;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['committer'] = data['committer'];
-    this['html_url'] = data['html_url'];
-    this['message'] = data['message'];
-    this['parents'] = data['parents'];
-    this['sha'] = data['sha'];
-    this['tree'] = data['tree'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class FileDeleteResponse {
+export interface FileDeleteResponse {
   /**  */
-  'commit': FileCommitResponse;
+  commit: FileCommitResponse;
 
   /**  */
-  'content': object;
+  content: object;
 
   /**  */
-  'verification': PayloadCommitVerification;
-
-  constructor(data: undefined | any = {}) {
-    this['commit'] = data['commit'];
-    this['content'] = data['content'];
-    this['verification'] = data['verification'];
-  }
+  verification: PayloadCommitVerification;
 }
 
-export class FileLinksResponse {
+export interface FileLinksResponse {
   /**  */
-  'git': string;
+  git: string;
 
   /**  */
-  'html': string;
+  html: string;
 
   /**  */
-  'self': string;
-
-  constructor(data: undefined | any = {}) {
-    this['git'] = data['git'];
-    this['html'] = data['html'];
-    this['self'] = data['self'];
-  }
+  self: string;
 }
 
-export class FileResponse {
+export interface FileResponse {
   /**  */
-  'commit': FileCommitResponse;
+  commit: FileCommitResponse;
 
   /**  */
-  'content': ContentsResponse;
+  content: ContentsResponse;
 
   /**  */
-  'verification': PayloadCommitVerification;
-
-  constructor(data: undefined | any = {}) {
-    this['commit'] = data['commit'];
-    this['content'] = data['content'];
-    this['verification'] = data['verification'];
-  }
+  verification: PayloadCommitVerification;
 }
 
-export class GPGKey {
+export interface GPGKey {
   /**  */
-  'can_certify': boolean;
+  can_certify: boolean;
 
   /**  */
-  'can_encrypt_comms': boolean;
+  can_encrypt_comms: boolean;
 
   /**  */
-  'can_encrypt_storage': boolean;
+  can_encrypt_storage: boolean;
 
   /**  */
-  'can_sign': boolean;
+  can_sign: boolean;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'emails': GPGKeyEmail[];
+  emails: GPGKeyEmail[];
 
   /**  */
-  'expires_at': Date;
+  expires_at: Date;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'key_id': string;
+  key_id: string;
 
   /**  */
-  'primary_key_id': string;
+  primary_key_id: string;
 
   /**  */
-  'public_key': string;
+  public_key: string;
 
   /**  */
-  'subkeys': GPGKey[];
-
-  constructor(data: undefined | any = {}) {
-    this['can_certify'] = data['can_certify'];
-    this['can_encrypt_comms'] = data['can_encrypt_comms'];
-    this['can_encrypt_storage'] = data['can_encrypt_storage'];
-    this['can_sign'] = data['can_sign'];
-    this['created_at'] = data['created_at'];
-    this['emails'] = data['emails'];
-    this['expires_at'] = data['expires_at'];
-    this['id'] = data['id'];
-    this['key_id'] = data['key_id'];
-    this['primary_key_id'] = data['primary_key_id'];
-    this['public_key'] = data['public_key'];
-    this['subkeys'] = data['subkeys'];
-  }
+  subkeys: GPGKey[];
 }
 
-export class GPGKeyEmail {
+export interface GPGKeyEmail {
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'verified': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['email'] = data['email'];
-    this['verified'] = data['verified'];
-  }
+  verified: boolean;
 }
 
-export class GitBlobResponse {
+export interface GitBlobResponse {
   /**  */
-  'content': string;
+  content: string;
 
   /**  */
-  'encoding': string;
+  encoding: string;
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'size': number;
+  size: number;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['content'] = data['content'];
-    this['encoding'] = data['encoding'];
-    this['sha'] = data['sha'];
-    this['size'] = data['size'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class GitEntry {
+export interface GitEntry {
   /**  */
-  'mode': string;
+  mode: string;
 
   /**  */
-  'path': string;
+  path: string;
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'size': number;
+  size: number;
 
   /**  */
-  'type': string;
+  type: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['mode'] = data['mode'];
-    this['path'] = data['path'];
-    this['sha'] = data['sha'];
-    this['size'] = data['size'];
-    this['type'] = data['type'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class GitHook {
+export interface GitHook {
   /**  */
-  'content': string;
+  content: string;
 
   /**  */
-  'is_active': boolean;
+  is_active: boolean;
 
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['content'] = data['content'];
-    this['is_active'] = data['is_active'];
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class GitObject {
+export interface GitObject {
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'type': string;
+  type: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['sha'] = data['sha'];
-    this['type'] = data['type'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class GitTreeResponse {
+export interface GitTreeResponse {
   /**  */
-  'page': number;
+  page: number;
 
   /**  */
-  'sha': string;
+  sha: string;
 
   /**  */
-  'total_count': number;
+  total_count: number;
 
   /**  */
-  'tree': GitEntry[];
+  tree: GitEntry[];
 
   /**  */
-  'truncated': boolean;
+  truncated: boolean;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['page'] = data['page'];
-    this['sha'] = data['sha'];
-    this['total_count'] = data['total_count'];
-    this['tree'] = data['tree'];
-    this['truncated'] = data['truncated'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class Hook {
+export interface Hook {
   /**  */
-  'active': boolean;
+  active: boolean;
 
   /**  */
-  'config': object;
+  config: object;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'events': string[];
+  events: string[];
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'type': string;
+  type: string;
 
   /**  */
-  'updated_at': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['active'] = data['active'];
-    this['config'] = data['config'];
-    this['created_at'] = data['created_at'];
-    this['events'] = data['events'];
-    this['id'] = data['id'];
-    this['type'] = data['type'];
-    this['updated_at'] = data['updated_at'];
-  }
+  updated_at: Date;
 }
 
-export class Identity {
+export interface Identity {
   /**  */
-  'email': string;
+  email: string;
 
   /**  */
-  'name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['email'] = data['email'];
-    this['name'] = data['name'];
-  }
+  name: string;
 }
 
-export class InternalTracker {
+export interface InternalTracker {
   /** Let only contributors track time (Built-in issue tracker) */
-  'allow_only_contributors_to_track_time': boolean;
+  allow_only_contributors_to_track_time: boolean;
 
   /** Enable dependencies for issues and pull requests (Built-in issue tracker) */
-  'enable_issue_dependencies': boolean;
+  enable_issue_dependencies: boolean;
 
   /** Enable time tracking (Built-in issue tracker) */
-  'enable_time_tracker': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['allow_only_contributors_to_track_time'] = data['allow_only_contributors_to_track_time'];
-    this['enable_issue_dependencies'] = data['enable_issue_dependencies'];
-    this['enable_time_tracker'] = data['enable_time_tracker'];
-  }
+  enable_time_tracker: boolean;
 }
 
-export class Issue {
+export interface Issue {
   /**  */
-  'assignee': User;
+  assignee: User;
 
   /**  */
-  'assignees': User[];
+  assignees: User[];
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'closed_at': Date;
+  closed_at: Date;
 
   /**  */
-  'comments': number;
+  comments: number;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'labels': Label[];
+  labels: Label[];
 
   /**  */
-  'milestone': Milestone;
+  milestone: Milestone;
 
   /**  */
-  'number': number;
+  number: number;
 
   /**  */
-  'original_author': string;
+  original_author: string;
 
   /**  */
-  'original_author_id': number;
+  original_author_id: number;
 
   /**  */
-  'pull_request': PullRequestMeta;
+  pull_request: PullRequestMeta;
 
   /**  */
-  'repository': RepositoryMeta;
+  repository: RepositoryMeta;
 
   /**  */
-  'state': StateType;
+  state: StateType;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['body'] = data['body'];
-    this['closed_at'] = data['closed_at'];
-    this['comments'] = data['comments'];
-    this['created_at'] = data['created_at'];
-    this['due_date'] = data['due_date'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['labels'] = data['labels'];
-    this['milestone'] = data['milestone'];
-    this['number'] = data['number'];
-    this['original_author'] = data['original_author'];
-    this['original_author_id'] = data['original_author_id'];
-    this['pull_request'] = data['pull_request'];
-    this['repository'] = data['repository'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-    this['updated_at'] = data['updated_at'];
-    this['url'] = data['url'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class IssueDeadline {
+export interface IssueDeadline {
   /**  */
-  'due_date': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['due_date'] = data['due_date'];
-  }
+  due_date: Date;
 }
 
-export class IssueLabelsOption {
+export interface IssueLabelsOption {
   /** list of label IDs */
-  'labels': number[];
-
-  constructor(data: undefined | any = {}) {
-    this['labels'] = data['labels'];
-  }
+  labels: number[];
 }
 
-export class Label {
+export interface Label {
   /**  */
-  'color': string;
+  color: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['color'] = data['color'];
-    this['description'] = data['description'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class MarkdownOption {
+export interface MarkdownOption {
   /** Context to render
 
 in: body */
-  'Context': string;
+  Context: string;
 
   /** Mode to render
 
 in: body */
-  'Mode': string;
+  Mode: string;
 
   /** Text markdown to render
 
 in: body */
-  'Text': string;
+  Text: string;
 
   /** Is it a wiki page ?
 
 in: body */
-  'Wiki': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['Context'] = data['Context'];
-    this['Mode'] = data['Mode'];
-    this['Text'] = data['Text'];
-    this['Wiki'] = data['Wiki'];
-  }
+  Wiki: boolean;
 }
 
-export class MergePullRequestOption {
+export interface MergePullRequestOption {
   /**  */
-  'Do': EnumMergePullRequestOptionDo;
+  Do: EnumMergePullRequestOptionDo;
 
   /**  */
-  'MergeMessageField': string;
+  MergeMessageField: string;
 
   /**  */
-  'MergeTitleField': string;
+  MergeTitleField: string;
 
   /**  */
-  'force_merge': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['Do'] = data['Do'];
-    this['MergeMessageField'] = data['MergeMessageField'];
-    this['MergeTitleField'] = data['MergeTitleField'];
-    this['force_merge'] = data['force_merge'];
-  }
+  force_merge: boolean;
 }
 
-export class MigrateRepoForm {
+export interface MigrateRepoForm {
   /**  */
-  'auth_password': string;
+  auth_password: string;
 
   /**  */
-  'auth_username': string;
+  auth_username: string;
 
   /**  */
-  'clone_addr': string;
+  clone_addr: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'issues': boolean;
+  issues: boolean;
 
   /**  */
-  'labels': boolean;
+  labels: boolean;
 
   /**  */
-  'milestones': boolean;
+  milestones: boolean;
 
   /**  */
-  'mirror': boolean;
+  mirror: boolean;
 
   /**  */
-  'private': boolean;
+  private: boolean;
 
   /**  */
-  'pull_requests': boolean;
+  pull_requests: boolean;
 
   /**  */
-  'releases': boolean;
+  releases: boolean;
 
   /**  */
-  'repo_name': string;
+  repo_name: string;
 
   /**  */
-  'uid': number;
+  uid: number;
 
   /**  */
-  'wiki': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['auth_password'] = data['auth_password'];
-    this['auth_username'] = data['auth_username'];
-    this['clone_addr'] = data['clone_addr'];
-    this['description'] = data['description'];
-    this['issues'] = data['issues'];
-    this['labels'] = data['labels'];
-    this['milestones'] = data['milestones'];
-    this['mirror'] = data['mirror'];
-    this['private'] = data['private'];
-    this['pull_requests'] = data['pull_requests'];
-    this['releases'] = data['releases'];
-    this['repo_name'] = data['repo_name'];
-    this['uid'] = data['uid'];
-    this['wiki'] = data['wiki'];
-  }
+  wiki: boolean;
 }
 
-export class Milestone {
+export interface Milestone {
   /**  */
-  'closed_at': Date;
+  closed_at: Date;
 
   /**  */
-  'closed_issues': number;
+  closed_issues: number;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'due_on': Date;
+  due_on: Date;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'open_issues': number;
+  open_issues: number;
 
   /**  */
-  'state': StateType;
+  state: StateType;
 
   /**  */
-  'title': string;
-
-  constructor(data: undefined | any = {}) {
-    this['closed_at'] = data['closed_at'];
-    this['closed_issues'] = data['closed_issues'];
-    this['description'] = data['description'];
-    this['due_on'] = data['due_on'];
-    this['id'] = data['id'];
-    this['open_issues'] = data['open_issues'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-  }
+  title: string;
 }
 
-export class NotificationCount {
+export interface NotificationCount {
   /**  */
-  'new': number;
-
-  constructor(data: undefined | any = {}) {
-    this['new'] = data['new'];
-  }
+  new: number;
 }
 
-export class NotificationSubject {
+export interface NotificationSubject {
   /**  */
-  'latest_comment_url': string;
+  latest_comment_url: string;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'type': string;
+  type: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['latest_comment_url'] = data['latest_comment_url'];
-    this['title'] = data['title'];
-    this['type'] = data['type'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class NotificationThread {
+export interface NotificationThread {
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'pinned': boolean;
+  pinned: boolean;
 
   /**  */
-  'repository': Repository;
+  repository: Repository;
 
   /**  */
-  'subject': NotificationSubject;
+  subject: NotificationSubject;
 
   /**  */
-  'unread': boolean;
+  unread: boolean;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['id'] = data['id'];
-    this['pinned'] = data['pinned'];
-    this['repository'] = data['repository'];
-    this['subject'] = data['subject'];
-    this['unread'] = data['unread'];
-    this['updated_at'] = data['updated_at'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class OAuth2Application {
+export interface OAuth2Application {
   /**  */
-  'client_id': string;
+  client_id: string;
 
   /**  */
-  'client_secret': string;
+  client_secret: string;
 
   /**  */
-  'created': Date;
+  created: Date;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'redirect_uris': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['client_id'] = data['client_id'];
-    this['client_secret'] = data['client_secret'];
-    this['created'] = data['created'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['redirect_uris'] = data['redirect_uris'];
-  }
+  redirect_uris: string[];
 }
 
-export class Organization {
+export interface Organization {
   /**  */
-  'avatar_url': string;
+  avatar_url: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'location': string;
+  location: string;
 
   /**  */
-  'repo_admin_change_team_access': boolean;
+  repo_admin_change_team_access: boolean;
 
   /**  */
-  'username': string;
+  username: string;
 
   /**  */
-  'visibility': string;
+  visibility: string;
 
   /**  */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['avatar_url'] = data['avatar_url'];
-    this['description'] = data['description'];
-    this['full_name'] = data['full_name'];
-    this['id'] = data['id'];
-    this['location'] = data['location'];
-    this['repo_admin_change_team_access'] = data['repo_admin_change_team_access'];
-    this['username'] = data['username'];
-    this['visibility'] = data['visibility'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class PRBranchInfo {
+export interface PRBranchInfo {
   /**  */
-  'label': string;
+  label: string;
 
   /**  */
-  'ref': string;
+  ref: string;
 
   /**  */
-  'repo': Repository;
+  repo: Repository;
 
   /**  */
-  'repo_id': number;
+  repo_id: number;
 
   /**  */
-  'sha': string;
-
-  constructor(data: undefined | any = {}) {
-    this['label'] = data['label'];
-    this['ref'] = data['ref'];
-    this['repo'] = data['repo'];
-    this['repo_id'] = data['repo_id'];
-    this['sha'] = data['sha'];
-  }
+  sha: string;
 }
 
-export class PayloadCommit {
+export interface PayloadCommit {
   /**  */
-  'added': string[];
+  added: string[];
 
   /**  */
-  'author': PayloadUser;
+  author: PayloadUser;
 
   /**  */
-  'committer': PayloadUser;
+  committer: PayloadUser;
 
   /** sha1 hash of the commit */
-  'id': string;
+  id: string;
 
   /**  */
-  'message': string;
+  message: string;
 
   /**  */
-  'modified': string[];
+  modified: string[];
 
   /**  */
-  'removed': string[];
+  removed: string[];
 
   /**  */
-  'timestamp': Date;
+  timestamp: Date;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'verification': PayloadCommitVerification;
-
-  constructor(data: undefined | any = {}) {
-    this['added'] = data['added'];
-    this['author'] = data['author'];
-    this['committer'] = data['committer'];
-    this['id'] = data['id'];
-    this['message'] = data['message'];
-    this['modified'] = data['modified'];
-    this['removed'] = data['removed'];
-    this['timestamp'] = data['timestamp'];
-    this['url'] = data['url'];
-    this['verification'] = data['verification'];
-  }
+  verification: PayloadCommitVerification;
 }
 
-export class PayloadCommitVerification {
+export interface PayloadCommitVerification {
   /**  */
-  'payload': string;
+  payload: string;
 
   /**  */
-  'reason': string;
+  reason: string;
 
   /**  */
-  'signature': string;
+  signature: string;
 
   /**  */
-  'signer': PayloadUser;
+  signer: PayloadUser;
 
   /**  */
-  'verified': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['payload'] = data['payload'];
-    this['reason'] = data['reason'];
-    this['signature'] = data['signature'];
-    this['signer'] = data['signer'];
-    this['verified'] = data['verified'];
-  }
+  verified: boolean;
 }
 
-export class PayloadUser {
+export interface PayloadUser {
   /**  */
-  'email': string;
+  email: string;
 
   /** Full name of the commit author */
-  'name': string;
+  name: string;
 
   /**  */
-  'username': string;
-
-  constructor(data: undefined | any = {}) {
-    this['email'] = data['email'];
-    this['name'] = data['name'];
-    this['username'] = data['username'];
-  }
+  username: string;
 }
 
-export class Permission {
+export interface Permission {
   /**  */
-  'admin': boolean;
+  admin: boolean;
 
   /**  */
-  'pull': boolean;
+  pull: boolean;
 
   /**  */
-  'push': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['admin'] = data['admin'];
-    this['pull'] = data['pull'];
-    this['push'] = data['push'];
-  }
+  push: boolean;
 }
 
-export class PublicKey {
+export interface PublicKey {
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'fingerprint': string;
+  fingerprint: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'key': string;
+  key: string;
 
   /**  */
-  'key_type': string;
+  key_type: string;
 
   /**  */
-  'read_only': boolean;
+  read_only: boolean;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['created_at'] = data['created_at'];
-    this['fingerprint'] = data['fingerprint'];
-    this['id'] = data['id'];
-    this['key'] = data['key'];
-    this['key_type'] = data['key_type'];
-    this['read_only'] = data['read_only'];
-    this['title'] = data['title'];
-    this['url'] = data['url'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class PullRequest {
+export interface PullRequest {
   /**  */
-  'assignee': User;
+  assignee: User;
 
   /**  */
-  'assignees': User[];
+  assignees: User[];
 
   /**  */
-  'base': PRBranchInfo;
+  base: PRBranchInfo;
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'closed_at': Date;
+  closed_at: Date;
 
   /**  */
-  'comments': number;
+  comments: number;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'diff_url': string;
+  diff_url: string;
 
   /**  */
-  'due_date': Date;
+  due_date: Date;
 
   /**  */
-  'head': PRBranchInfo;
+  head: PRBranchInfo;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'labels': Label[];
+  labels: Label[];
 
   /**  */
-  'merge_base': string;
+  merge_base: string;
 
   /**  */
-  'merge_commit_sha': string;
+  merge_commit_sha: string;
 
   /**  */
-  'mergeable': boolean;
+  mergeable: boolean;
 
   /**  */
-  'merged': boolean;
+  merged: boolean;
 
   /**  */
-  'merged_at': Date;
+  merged_at: Date;
 
   /**  */
-  'merged_by': User;
+  merged_by: User;
 
   /**  */
-  'milestone': Milestone;
+  milestone: Milestone;
 
   /**  */
-  'number': number;
+  number: number;
 
   /**  */
-  'patch_url': string;
+  patch_url: string;
 
   /**  */
-  'state': StateType;
+  state: StateType;
 
   /**  */
-  'title': string;
+  title: string;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['assignee'] = data['assignee'];
-    this['assignees'] = data['assignees'];
-    this['base'] = data['base'];
-    this['body'] = data['body'];
-    this['closed_at'] = data['closed_at'];
-    this['comments'] = data['comments'];
-    this['created_at'] = data['created_at'];
-    this['diff_url'] = data['diff_url'];
-    this['due_date'] = data['due_date'];
-    this['head'] = data['head'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['labels'] = data['labels'];
-    this['merge_base'] = data['merge_base'];
-    this['merge_commit_sha'] = data['merge_commit_sha'];
-    this['mergeable'] = data['mergeable'];
-    this['merged'] = data['merged'];
-    this['merged_at'] = data['merged_at'];
-    this['merged_by'] = data['merged_by'];
-    this['milestone'] = data['milestone'];
-    this['number'] = data['number'];
-    this['patch_url'] = data['patch_url'];
-    this['state'] = data['state'];
-    this['title'] = data['title'];
-    this['updated_at'] = data['updated_at'];
-    this['url'] = data['url'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class PullRequestMeta {
+export interface PullRequestMeta {
   /**  */
-  'merged': boolean;
+  merged: boolean;
 
   /**  */
-  'merged_at': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['merged'] = data['merged'];
-    this['merged_at'] = data['merged_at'];
-  }
+  merged_at: Date;
 }
 
-export class PullReview {
+export interface PullReview {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'comments_count': number;
+  comments_count: number;
 
   /**  */
-  'commit_id': string;
+  commit_id: string;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'official': boolean;
+  official: boolean;
 
   /**  */
-  'pull_request_url': string;
+  pull_request_url: string;
 
   /**  */
-  'stale': boolean;
+  stale: boolean;
 
   /**  */
-  'state': ReviewStateType;
+  state: ReviewStateType;
 
   /**  */
-  'submitted_at': Date;
+  submitted_at: Date;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['comments_count'] = data['comments_count'];
-    this['commit_id'] = data['commit_id'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['official'] = data['official'];
-    this['pull_request_url'] = data['pull_request_url'];
-    this['stale'] = data['stale'];
-    this['state'] = data['state'];
-    this['submitted_at'] = data['submitted_at'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class PullReviewComment {
+export interface PullReviewComment {
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'commit_id': string;
+  commit_id: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'diff_hunk': string;
+  diff_hunk: string;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'original_commit_id': string;
+  original_commit_id: string;
 
   /**  */
-  'original_position': number;
+  original_position: number;
 
   /**  */
-  'path': string;
+  path: string;
 
   /**  */
-  'position': number;
+  position: number;
 
   /**  */
-  'pull_request_review_id': number;
+  pull_request_review_id: number;
 
   /**  */
-  'pull_request_url': string;
+  pull_request_url: string;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['commit_id'] = data['commit_id'];
-    this['created_at'] = data['created_at'];
-    this['diff_hunk'] = data['diff_hunk'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['original_commit_id'] = data['original_commit_id'];
-    this['original_position'] = data['original_position'];
-    this['path'] = data['path'];
-    this['position'] = data['position'];
-    this['pull_request_review_id'] = data['pull_request_review_id'];
-    this['pull_request_url'] = data['pull_request_url'];
-    this['updated_at'] = data['updated_at'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class Reaction {
+export interface Reaction {
   /**  */
-  'content': string;
+  content: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'user': User;
-
-  constructor(data: undefined | any = {}) {
-    this['content'] = data['content'];
-    this['created_at'] = data['created_at'];
-    this['user'] = data['user'];
-  }
+  user: User;
 }
 
-export class Reference {
+export interface Reference {
   /**  */
-  'object': GitObject;
+  object: GitObject;
 
   /**  */
-  'ref': string;
+  ref: string;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['object'] = data['object'];
-    this['ref'] = data['ref'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class Release {
+export interface Release {
   /**  */
-  'assets': Attachment[];
+  assets: Attachment[];
 
   /**  */
-  'author': User;
+  author: User;
 
   /**  */
-  'body': string;
+  body: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'draft': boolean;
+  draft: boolean;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'prerelease': boolean;
+  prerelease: boolean;
 
   /**  */
-  'published_at': Date;
+  published_at: Date;
 
   /**  */
-  'tag_name': string;
+  tag_name: string;
 
   /**  */
-  'tarball_url': string;
+  tarball_url: string;
 
   /**  */
-  'target_commitish': string;
+  target_commitish: string;
 
   /**  */
-  'url': string;
+  url: string;
 
   /**  */
-  'zipball_url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['assets'] = data['assets'];
-    this['author'] = data['author'];
-    this['body'] = data['body'];
-    this['created_at'] = data['created_at'];
-    this['draft'] = data['draft'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['prerelease'] = data['prerelease'];
-    this['published_at'] = data['published_at'];
-    this['tag_name'] = data['tag_name'];
-    this['tarball_url'] = data['tarball_url'];
-    this['target_commitish'] = data['target_commitish'];
-    this['url'] = data['url'];
-    this['zipball_url'] = data['zipball_url'];
-  }
+  zipball_url: string;
 }
 
-export class RepoCommit {
+export interface RepoCommit {
   /**  */
-  'author': CommitUser;
+  author: CommitUser;
 
   /**  */
-  'committer': CommitUser;
+  committer: CommitUser;
 
   /**  */
-  'message': string;
+  message: string;
 
   /**  */
-  'tree': CommitMeta;
+  tree: CommitMeta;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['committer'] = data['committer'];
-    this['message'] = data['message'];
-    this['tree'] = data['tree'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 
-export class RepoTopicOptions {
+export interface RepoTopicOptions {
   /** list of topic names */
-  'topics': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['topics'] = data['topics'];
-  }
+  topics: string[];
 }
 
-export class Repository {
+export interface Repository {
   /**  */
-  'allow_merge_commits': boolean;
+  allow_merge_commits: boolean;
 
   /**  */
-  'allow_rebase': boolean;
+  allow_rebase: boolean;
 
   /**  */
-  'allow_rebase_explicit': boolean;
+  allow_rebase_explicit: boolean;
 
   /**  */
-  'allow_squash_merge': boolean;
+  allow_squash_merge: boolean;
 
   /**  */
-  'archived': boolean;
+  archived: boolean;
 
   /**  */
-  'avatar_url': string;
+  avatar_url: string;
 
   /**  */
-  'clone_url': string;
+  clone_url: string;
 
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'default_branch': string;
+  default_branch: string;
 
   /**  */
-  'description': string;
+  description: string;
 
   /**  */
-  'empty': boolean;
+  empty: boolean;
 
   /**  */
-  'external_tracker': ExternalTracker;
+  external_tracker: ExternalTracker;
 
   /**  */
-  'external_wiki': ExternalWiki;
+  external_wiki: ExternalWiki;
 
   /**  */
-  'fork': boolean;
+  fork: boolean;
 
   /**  */
-  'forks_count': number;
+  forks_count: number;
 
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'has_issues': boolean;
+  has_issues: boolean;
 
   /**  */
-  'has_pull_requests': boolean;
+  has_pull_requests: boolean;
 
   /**  */
-  'has_wiki': boolean;
+  has_wiki: boolean;
 
   /**  */
-  'html_url': string;
+  html_url: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'ignore_whitespace_conflicts': boolean;
+  ignore_whitespace_conflicts: boolean;
 
   /**  */
-  'internal_tracker': InternalTracker;
+  internal_tracker: InternalTracker;
 
   /**  */
-  'mirror': boolean;
+  mirror: boolean;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'open_issues_count': number;
+  open_issues_count: number;
 
   /**  */
-  'open_pr_counter': number;
+  open_pr_counter: number;
 
   /**  */
-  'original_url': string;
+  original_url: string;
 
   /**  */
-  'owner': User;
+  owner: User;
 
   /**  */
-  'parent': Repository;
+  parent: Repository;
 
   /**  */
-  'permissions': Permission;
+  permissions: Permission;
 
   /**  */
-  'private': boolean;
+  private: boolean;
 
   /**  */
-  'release_counter': number;
+  release_counter: number;
 
   /**  */
-  'size': number;
+  size: number;
 
   /**  */
-  'ssh_url': string;
+  ssh_url: string;
 
   /**  */
-  'stars_count': number;
+  stars_count: number;
 
   /**  */
-  'template': boolean;
+  template: boolean;
 
   /**  */
-  'updated_at': Date;
+  updated_at: Date;
 
   /**  */
-  'watchers_count': number;
+  watchers_count: number;
 
   /**  */
-  'website': string;
-
-  constructor(data: undefined | any = {}) {
-    this['allow_merge_commits'] = data['allow_merge_commits'];
-    this['allow_rebase'] = data['allow_rebase'];
-    this['allow_rebase_explicit'] = data['allow_rebase_explicit'];
-    this['allow_squash_merge'] = data['allow_squash_merge'];
-    this['archived'] = data['archived'];
-    this['avatar_url'] = data['avatar_url'];
-    this['clone_url'] = data['clone_url'];
-    this['created_at'] = data['created_at'];
-    this['default_branch'] = data['default_branch'];
-    this['description'] = data['description'];
-    this['empty'] = data['empty'];
-    this['external_tracker'] = data['external_tracker'];
-    this['external_wiki'] = data['external_wiki'];
-    this['fork'] = data['fork'];
-    this['forks_count'] = data['forks_count'];
-    this['full_name'] = data['full_name'];
-    this['has_issues'] = data['has_issues'];
-    this['has_pull_requests'] = data['has_pull_requests'];
-    this['has_wiki'] = data['has_wiki'];
-    this['html_url'] = data['html_url'];
-    this['id'] = data['id'];
-    this['ignore_whitespace_conflicts'] = data['ignore_whitespace_conflicts'];
-    this['internal_tracker'] = data['internal_tracker'];
-    this['mirror'] = data['mirror'];
-    this['name'] = data['name'];
-    this['open_issues_count'] = data['open_issues_count'];
-    this['open_pr_counter'] = data['open_pr_counter'];
-    this['original_url'] = data['original_url'];
-    this['owner'] = data['owner'];
-    this['parent'] = data['parent'];
-    this['permissions'] = data['permissions'];
-    this['private'] = data['private'];
-    this['release_counter'] = data['release_counter'];
-    this['size'] = data['size'];
-    this['ssh_url'] = data['ssh_url'];
-    this['stars_count'] = data['stars_count'];
-    this['template'] = data['template'];
-    this['updated_at'] = data['updated_at'];
-    this['watchers_count'] = data['watchers_count'];
-    this['website'] = data['website'];
-  }
+  website: string;
 }
 
-export class RepositoryMeta {
+export interface RepositoryMeta {
   /**  */
-  'full_name': string;
+  full_name: string;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'name': string;
+  name: string;
 
   /**  */
-  'owner': string;
-
-  constructor(data: undefined | any = {}) {
-    this['full_name'] = data['full_name'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['owner'] = data['owner'];
-  }
+  owner: string;
 }
 
-export class ReviewStateType {
-  constructor(data: undefined | any = {}) {}
+export interface ReviewStateType {}
+
+export interface SearchResults {
+  /**  */
+  data: Repository[];
+
+  /**  */
+  ok: boolean;
 }
 
-export class SearchResults {
+export interface ServerVersion {
   /**  */
-  'data': Repository[];
-
-  /**  */
-  'ok': boolean;
-
-  constructor(data: undefined | any = {}) {
-    this['data'] = data['data'];
-    this['ok'] = data['ok'];
-  }
+  version: string;
 }
 
-export class ServerVersion {
-  /**  */
-  'version': string;
+export interface StateType {}
 
-  constructor(data: undefined | any = {}) {
-    this['version'] = data['version'];
-  }
+export interface Status {
+  /**  */
+  context: string;
+
+  /**  */
+  created_at: Date;
+
+  /**  */
+  creator: User;
+
+  /**  */
+  description: string;
+
+  /**  */
+  id: number;
+
+  /**  */
+  status: StatusState;
+
+  /**  */
+  target_url: string;
+
+  /**  */
+  updated_at: Date;
+
+  /**  */
+  url: string;
 }
 
-export class StateType {
-  constructor(data: undefined | any = {}) {}
+export interface StatusState {}
+
+export interface StopWatch {
+  /**  */
+  created: Date;
+
+  /**  */
+  issue_index: number;
 }
 
-export class Status {
+export interface SubmitPullReviewOptions {
   /**  */
-  'context': string;
+  body: string;
 
   /**  */
-  'created_at': Date;
-
-  /**  */
-  'creator': User;
-
-  /**  */
-  'description': string;
-
-  /**  */
-  'id': number;
-
-  /**  */
-  'status': StatusState;
-
-  /**  */
-  'target_url': string;
-
-  /**  */
-  'updated_at': Date;
-
-  /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['context'] = data['context'];
-    this['created_at'] = data['created_at'];
-    this['creator'] = data['creator'];
-    this['description'] = data['description'];
-    this['id'] = data['id'];
-    this['status'] = data['status'];
-    this['target_url'] = data['target_url'];
-    this['updated_at'] = data['updated_at'];
-    this['url'] = data['url'];
-  }
+  event: ReviewStateType;
 }
 
-export class StatusState {
-  constructor(data: undefined | any = {}) {}
+export interface Tag {
+  /**  */
+  commit: CommitMeta;
+
+  /**  */
+  id: string;
+
+  /**  */
+  name: string;
+
+  /**  */
+  tarball_url: string;
+
+  /**  */
+  zipball_url: string;
 }
 
-export class StopWatch {
+export interface Team {
   /**  */
-  'created': Date;
+  can_create_org_repo: boolean;
 
   /**  */
-  'issue_index': number;
+  description: string;
 
-  constructor(data: undefined | any = {}) {
-    this['created'] = data['created'];
-    this['issue_index'] = data['issue_index'];
-  }
+  /**  */
+  id: number;
+
+  /**  */
+  includes_all_repositories: boolean;
+
+  /**  */
+  name: string;
+
+  /**  */
+  organization: Organization;
+
+  /**  */
+  permission: EnumTeamPermission;
+
+  /**  */
+  units: string[];
 }
 
-export class SubmitPullReviewOptions {
-  /**  */
-  'body': string;
+export interface TimeStamp {}
 
+export interface TopicName {
   /**  */
-  'event': ReviewStateType;
-
-  constructor(data: undefined | any = {}) {
-    this['body'] = data['body'];
-    this['event'] = data['event'];
-  }
+  topics: string[];
 }
 
-export class Tag {
+export interface TopicResponse {
   /**  */
-  'commit': CommitMeta;
+  created: Date;
 
   /**  */
-  'id': string;
+  id: number;
 
   /**  */
-  'name': string;
+  repo_count: number;
 
   /**  */
-  'tarball_url': string;
+  topic_name: string;
 
   /**  */
-  'zipball_url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['commit'] = data['commit'];
-    this['id'] = data['id'];
-    this['name'] = data['name'];
-    this['tarball_url'] = data['tarball_url'];
-    this['zipball_url'] = data['zipball_url'];
-  }
+  updated: Date;
 }
 
-export class Team {
+export interface TrackedTime {
   /**  */
-  'can_create_org_repo': boolean;
-
-  /**  */
-  'description': string;
+  created: Date;
 
   /**  */
-  'id': number;
+  id: number;
 
   /**  */
-  'includes_all_repositories': boolean;
-
-  /**  */
-  'name': string;
-
-  /**  */
-  'organization': Organization;
-
-  /**  */
-  'permission': EnumTeamPermission;
-
-  /**  */
-  'units': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['can_create_org_repo'] = data['can_create_org_repo'];
-    this['description'] = data['description'];
-    this['id'] = data['id'];
-    this['includes_all_repositories'] = data['includes_all_repositories'];
-    this['name'] = data['name'];
-    this['organization'] = data['organization'];
-    this['permission'] = data['permission'];
-    this['units'] = data['units'];
-  }
-}
-
-export class TimeStamp {
-  constructor(data: undefined | any = {}) {}
-}
-
-export class TopicName {
-  /**  */
-  'topics': string[];
-
-  constructor(data: undefined | any = {}) {
-    this['topics'] = data['topics'];
-  }
-}
-
-export class TopicResponse {
-  /**  */
-  'created': Date;
-
-  /**  */
-  'id': number;
-
-  /**  */
-  'repo_count': number;
-
-  /**  */
-  'topic_name': string;
-
-  /**  */
-  'updated': Date;
-
-  constructor(data: undefined | any = {}) {
-    this['created'] = data['created'];
-    this['id'] = data['id'];
-    this['repo_count'] = data['repo_count'];
-    this['topic_name'] = data['topic_name'];
-    this['updated'] = data['updated'];
-  }
-}
-
-export class TrackedTime {
-  /**  */
-  'created': Date;
-
-  /**  */
-  'id': number;
-
-  /**  */
-  'issue': Issue;
+  issue: Issue;
 
   /** deprecated (only for backwards compatibility) */
-  'issue_id': number;
+  issue_id: number;
 
   /** Time in seconds */
-  'time': number;
+  time: number;
 
   /** deprecated (only for backwards compatibility) */
-  'user_id': number;
+  user_id: number;
 
   /**  */
-  'user_name': string;
-
-  constructor(data: undefined | any = {}) {
-    this['created'] = data['created'];
-    this['id'] = data['id'];
-    this['issue'] = data['issue'];
-    this['issue_id'] = data['issue_id'];
-    this['time'] = data['time'];
-    this['user_id'] = data['user_id'];
-    this['user_name'] = data['user_name'];
-  }
+  user_name: string;
 }
 
-export class TransferRepoOption {
+export interface TransferRepoOption {
   /**  */
-  'new_owner': string;
+  new_owner: string;
 
   /** ID of the team or teams to add to the repository. Teams can only be added to organization-owned repositories. */
-  'team_ids': number[];
-
-  constructor(data: undefined | any = {}) {
-    this['new_owner'] = data['new_owner'];
-    this['team_ids'] = data['team_ids'];
-  }
+  team_ids: number[];
 }
 
-export class UpdateFileOptions {
+export interface UpdateFileOptions {
   /**  */
-  'author': Identity;
+  author: Identity;
 
   /** branch (optional) to base this file from. if not given, the default branch is used */
-  'branch': string;
+  branch: string;
 
   /**  */
-  'committer': Identity;
+  committer: Identity;
 
   /** content must be base64 encoded */
-  'content': string;
+  content: string;
 
   /**  */
-  'dates': CommitDateOptions;
+  dates: CommitDateOptions;
 
   /** from_path (optional) is the path of the original file which will be moved/renamed to the path in the URL */
-  'from_path': string;
+  from_path: string;
 
   /** message (optional) for the commit of this file. if not supplied, a default message will be used */
-  'message': string;
+  message: string;
 
   /** new_branch (optional) will make a new branch from `branch` before creating the file */
-  'new_branch': string;
+  new_branch: string;
 
   /** sha is the SHA for the file that already exists */
-  'sha': string;
-
-  constructor(data: undefined | any = {}) {
-    this['author'] = data['author'];
-    this['branch'] = data['branch'];
-    this['committer'] = data['committer'];
-    this['content'] = data['content'];
-    this['dates'] = data['dates'];
-    this['from_path'] = data['from_path'];
-    this['message'] = data['message'];
-    this['new_branch'] = data['new_branch'];
-    this['sha'] = data['sha'];
-  }
+  sha: string;
 }
 
-export class User {
+export interface User {
   /** URL to the user's avatar */
-  'avatar_url': string;
+  avatar_url: string;
 
   /**  */
-  'created': Date;
+  created: Date;
 
   /**  */
-  'email': string;
+  email: string;
 
   /** the user's full name */
-  'full_name': string;
+  full_name: string;
 
   /** the user's id */
-  'id': number;
+  id: number;
 
   /** Is the user an administrator */
-  'is_admin': boolean;
+  is_admin: boolean;
 
   /** User locale */
-  'language': string;
+  language: string;
 
   /**  */
-  'last_login': Date;
+  last_login: Date;
 
   /** the user's username */
-  'login': string;
-
-  constructor(data: undefined | any = {}) {
-    this['avatar_url'] = data['avatar_url'];
-    this['created'] = data['created'];
-    this['email'] = data['email'];
-    this['full_name'] = data['full_name'];
-    this['id'] = data['id'];
-    this['is_admin'] = data['is_admin'];
-    this['language'] = data['language'];
-    this['last_login'] = data['last_login'];
-    this['login'] = data['login'];
-  }
+  login: string;
 }
 
-export class UserHeatmapData {
+export interface UserHeatmapData {
   /**  */
-  'contributions': number;
+  contributions: number;
 
   /**  */
-  'timestamp': TimeStamp;
-
-  constructor(data: undefined | any = {}) {
-    this['contributions'] = data['contributions'];
-    this['timestamp'] = data['timestamp'];
-  }
+  timestamp: TimeStamp;
 }
 
-export class WatchInfo {
+export interface WatchInfo {
   /**  */
-  'created_at': Date;
+  created_at: Date;
 
   /**  */
-  'ignored': boolean;
+  ignored: boolean;
 
   /**  */
-  'reason': object;
+  reason: object;
 
   /**  */
-  'repository_url': string;
+  repository_url: string;
 
   /**  */
-  'subscribed': boolean;
+  subscribed: boolean;
 
   /**  */
-  'url': string;
-
-  constructor(data: undefined | any = {}) {
-    this['created_at'] = data['created_at'];
-    this['ignored'] = data['ignored'];
-    this['reason'] = data['reason'];
-    this['repository_url'] = data['repository_url'];
-    this['subscribed'] = data['subscribed'];
-    this['url'] = data['url'];
-  }
+  url: string;
 }
 export enum EnumCreateHookOptionType {
   'dingtalk' = 'dingtalk',
